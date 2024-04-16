@@ -1,0 +1,52 @@
+@media (max-width: 992px) {
+  .bth-change-delete-th {
+    flex-direction: column;
+  }
+  .bth-change-delete-th .btn-change {
+    margin-right: 0;
+  }
+  .table td,
+  .table th {
+    padding: 10px 0.3rem;
+  }
+}
+@media (max-width: 769px) {
+  .header__content {
+    padding-right: 0px;
+  }
+
+  .input-header {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .app {
+    overflow-x: scroll;
+  }
+
+  .btn-date-of-create {
+    min-width: 88px;
+  }
+}
+@media (max-width: 576px) {
+  .container .header__content {
+    padding-right: 0;
+    justify-content: center;
+  }
+
+  .header__content .header__svg {
+    margin: 0;
+  }
+
+  .input-header {
+    display: none;
+  }
+
+  .header__svg {
+    margin: 0 auto;
+  }
+
+  .form-header {
+    display: none;
+  }
+}

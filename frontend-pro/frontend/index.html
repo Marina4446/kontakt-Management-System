@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./libs/choices.min.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      crossorigin="anonymous"
+    />
+
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+
+    <!-- Bootstrap Bundle JS (jsDelivr CDN) -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="./css/media.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Проект(Список пользователей)</title>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="container">
+          <div class="header__content">
+            <div class="header__svg">
+              <svg
+                width="50"
+                height="50"
+                viewBox="0 0 50 50"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="25" cy="25" r="25" fill="#9873FF" />
+                <path
+                  d="M17.2617 29.082C17.2617 30.0898 16.9102 30.8574 16.207 31.3848C15.5098 31.9121 14.4639 32.1758 13.0693 32.1758C12.3545 32.1758 11.7451 32.126 11.2412 32.0264C10.7373 31.9326 10.2656 31.792 9.82617 31.6045V29.3896C10.3242 29.624 10.8838 29.8203 11.5049 29.9785C12.1318 30.1367 12.6826 30.2158 13.1572 30.2158C14.1299 30.2158 14.6162 29.9346 14.6162 29.3721C14.6162 29.1611 14.5518 28.9912 14.4229 28.8623C14.2939 28.7275 14.0713 28.5781 13.7549 28.4141C13.4385 28.2441 13.0166 28.0479 12.4893 27.8252C11.7334 27.5088 11.1768 27.2158 10.8193 26.9463C10.4678 26.6768 10.21 26.3691 10.0459 26.0234C9.8877 25.6719 9.80859 25.2412 9.80859 24.7314C9.80859 23.8584 10.1455 23.1846 10.8193 22.71C11.499 22.2295 12.46 21.9893 13.7021 21.9893C14.8857 21.9893 16.0371 22.2471 17.1562 22.7627L16.3477 24.6963C15.8555 24.4854 15.3955 24.3125 14.9678 24.1777C14.54 24.043 14.1035 23.9756 13.6582 23.9756C12.8672 23.9756 12.4717 24.1895 12.4717 24.6172C12.4717 24.8574 12.5977 25.0654 12.8496 25.2412C13.1074 25.417 13.667 25.6777 14.5283 26.0234C15.2959 26.334 15.8584 26.624 16.2158 26.8936C16.5732 27.1631 16.8369 27.4736 17.0068 27.8252C17.1768 28.1768 17.2617 28.5957 17.2617 29.082ZM21.9287 26.6562L23.0977 25.1621L25.8486 22.1738H28.8721L24.9697 26.4365L29.1094 32H26.0156L23.1855 28.0186L22.0342 28.9414V32H19.3535V18.3242H22.0342V24.4238L21.8936 26.6562H21.9287ZM35.9824 21.9893C37.1426 21.9893 38.0508 22.4434 38.707 23.3516C39.3633 24.2539 39.6914 25.4932 39.6914 27.0693C39.6914 28.6924 39.3516 29.9492 38.6719 30.8398C37.998 31.7305 37.0781 32.1758 35.9121 32.1758C34.7578 32.1758 33.8525 31.7568 33.1963 30.9189H33.0117L32.5635 32H30.5156V18.3242H33.1963V21.5059C33.1963 21.9102 33.1611 22.5576 33.0908 23.4482H33.1963C33.8232 22.4756 34.752 21.9893 35.9824 21.9893ZM35.1211 24.1338C34.459 24.1338 33.9756 24.3389 33.6709 24.749C33.3662 25.1533 33.208 25.8242 33.1963 26.7617V27.0518C33.1963 28.1064 33.3516 28.8623 33.6621 29.3193C33.9785 29.7764 34.4766 30.0049 35.1562 30.0049C35.707 30.0049 36.1436 29.7529 36.4658 29.249C36.7939 28.7393 36.958 28.001 36.958 27.0342C36.958 26.0674 36.7939 25.3438 36.4658 24.8633C36.1377 24.377 35.6895 24.1338 35.1211 24.1338ZM41.5283 30.7432C41.5283 30.251 41.6602 29.8789 41.9238 29.627C42.1875 29.375 42.5713 29.249 43.0752 29.249C43.5615 29.249 43.9365 29.3779 44.2002 29.6357C44.4697 29.8936 44.6045 30.2627 44.6045 30.7432C44.6045 31.2061 44.4697 31.5723 44.2002 31.8418C43.9307 32.1055 43.5557 32.2373 43.0752 32.2373C42.583 32.2373 42.2021 32.1084 41.9326 31.8506C41.6631 31.5869 41.5283 31.2178 41.5283 30.7432Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <form action="#" class="form-header" id="form-header">
+              <input
+                type="text"
+                class="input-header"
+                id="input-header"
+                placeholder="Введите запрос"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="main__container">
+          <h1 class="main__title">Клиенты</h1>
+          <div class="app" id="app">
+            <div class="main__btns">
+              <button id="btnID" class="btn-id button">
+                ID
+                <svg
+                  class="btn-id-svg"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_224_707)">
+                    <path
+                      d="M2 6L2.705 6.705L5.5 3.915L5.5 10L6.5 10L6.5 3.915L9.29 6.71L10 6L6 2L2 6Z"
+                      fill="#9873FF"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_224_707">
+                      <rect
+                        width="12"
+                        height="12"
+                        fill="white"
+                        transform="translate(12 12) rotate(-180)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+              <button class="btn-fio button" id="btnFIO">
+                Фамилия Имя Отчество
+                <svg
+                  class="btn-fio-svg"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_224_707)">
+                    <path
+                      d="M2 6L2.705 6.705L5.5 3.915L5.5 10L6.5 10L6.5 3.915L9.29 6.71L10 6L6 2L2 6Z"
+                      fill="#9873FF"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_224_707">
+                      <rect
+                        width="12"
+                        height="12"
+                        fill="white"
+                        transform="translate(12 12) rotate(-180)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <span class="color-svg"> A-Я </span>
+              </button>
+              <button class="btn-date-of-create button" id="createAt">
+                Дата и время создания
+                <svg
+                  class="btn-create-svg"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g opacity="0.7" clip-path="url(#clip0_224_711)">
+                    <path
+                      d="M10 6L9.295 5.295L6.5 8.085L6.5 2H5.5L5.5 8.085L2.71 5.29L2 6L6 10L10 6Z"
+                      fill="#9873FF"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_224_711">
+                      <rect width="12" height="12" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+              <button class="btn-last-change button" id="changeAt">
+                Последние изменения
+                <svg
+                  class="btn-change-svg"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g opacity="0.7" clip-path="url(#clip0_224_712)">
+                    <path
+                      d="M10 6L9.295 5.295L6.5 8.085L6.5 2H5.5L5.5 8.085L2.71 5.29L2 6L6 10L10 6Z"
+                      fill="#9873FF"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_224_712">
+                      <rect width="12" height="12" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+              <span class="contacts" id="contacts">Контакты</span>
+              <span class="action" id="action">Действия</span>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            class="button-add-user button"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            <svg
+              width="31"
+              height="24"
+              viewBox="0 0 31 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g filter="url(#filter0_d_75701_119)">
+                <path
+                  d="M18.5 8C20.71 8 22.5 6.21 22.5 4C22.5 1.79 20.71 0 18.5 0C16.29 0 14.5 1.79 14.5 4C14.5 6.21 16.29 8 18.5 8ZM9.5 6V3H7.5V6H4.5V8H7.5V11H9.5V8H12.5V6H9.5ZM18.5 10C15.83 10 10.5 11.34 10.5 14V16H26.5V14C26.5 11.34 21.17 10 18.5 10Z"
+                  fill="#9873FF"
+                />
+              </g>
+              <defs>
+                <filter
+                  id="filter0_d_75701_119"
+                  x="0.5"
+                  y="0"
+                  width="30"
+                  height="24"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset dy="4" />
+                  <feGaussianBlur stdDeviation="2" />
+                  <feComposite in2="hardAlpha" operator="out" />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="BackgroundImageFix"
+                    result="effect1_dropShadow_75701_119"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="effect1_dropShadow_75701_119"
+                    result="shape"
+                  />
+                </filter>
+              </defs>
+            </svg>
+            Добавить клиента
+          </button>
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <form id="user-form" class="user-error">
+                  <button
+                    type="button"
+                    class="remove-button-new-user-form button"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <svg
+                      width="17"
+                      height="17"
+                      viewBox="0 0 17 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M16.2332 1.73333L15.2665 0.766664L8.49985 7.53336L1.73318 0.766696L0.766515 1.73336L7.53318 8.50003L0.766542 15.2667L1.73321 16.2333L8.49985 9.46669L15.2665 16.2334L16.2332 15.2667L9.46651 8.50003L16.2332 1.73333Z"
+                        fill="#B0B0B0"
+                      />
+                    </svg>
+                  </button>
+
+                  <h2 class="new-user-title modal-title" id="exampleModalLabel">
+                    Новый клиент
+                  </h2>
+                  <div class="surname-div">
+                    <input
+                      type="text"
+                      id="new-user-surname"
+                      class="new-user-surname js-input"
+                      placeholder="Фамилия*"
+                    />
+                  </div>
+
+                  <div class="name-div">
+                    <input
+                      type="text"
+                      id="new-user-name"
+                      class="new-user-name js-input"
+                      placeholder="Имя*"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="text"
+                      id="new-user-lastname"
+                      class="new-user-lastname"
+                      placeholder="Отчество"
+                    />
+                  </div>
+                  <div class="add-contact">
+                    <div class="contact-block"></div>
+                    <button type="button" class="add-contact-button button">
+                      <svg
+                        class="add-contact-svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_224_8628)">
+                          <path
+                            d="M7.99998 4.66659C7.63331 4.66659 7.33331 4.96659 7.33331 5.33325V7.33325H5.33331C4.96665 7.33325 4.66665 7.63325 4.66665 7.99992C4.66665 8.36659 4.96665 8.66659 5.33331 8.66659H7.33331V10.6666C7.33331 11.0333 7.63331 11.3333 7.99998 11.3333C8.36665 11.3333 8.66665 11.0333 8.66665 10.6666V8.66659H10.6666C11.0333 8.66659 11.3333 8.36659 11.3333 7.99992C11.3333 7.63325 11.0333 7.33325 10.6666 7.33325H8.66665V5.33325C8.66665 4.96659 8.36665 4.66659 7.99998 4.66659ZM7.99998 1.33325C4.31998 1.33325 1.33331 4.31992 1.33331 7.99992C1.33331 11.6799 4.31998 14.6666 7.99998 14.6666C11.68 14.6666 14.6666 11.6799 14.6666 7.99992C14.6666 4.31992 11.68 1.33325 7.99998 1.33325ZM7.99998 13.3333C5.05998 13.3333 2.66665 10.9399 2.66665 7.99992C2.66665 5.05992 5.05998 2.66659 7.99998 2.66659C10.94 2.66659 13.3333 5.05992 13.3333 7.99992C13.3333 10.9399 10.94 13.3333 7.99998 13.3333Z"
+                            fill="#9873FF"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_224_8628">
+                            <rect width="16" height="16" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      Добавить контакт
+                    </button>
+
+                    <button type="submit" class="save-new-user button">
+                      Сохранить
+                    </button>
+                    <button
+                      type="button"
+                      class="remove-new-user button"
+                      data-bs-dismiss="modal"
+                    >
+                      Отмена
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div
+            class="modal fade"
+            id="deleteModal"
+            tabindex="-1"
+            aria-labelledby="deleteModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="div user-delete-block">
+                  <button
+                    type="button"
+                    class="button button-block-delete"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <svg
+                      width="17"
+                      height="17"
+                      viewBox="0 0 17 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M16.2332 1.73333L15.2665 0.766664L8.49985 7.53336L1.73318 0.766696L0.766515 1.73336L7.53318 8.50003L0.766542 15.2667L1.73321 16.2333L8.49985 9.46669L15.2665 16.2334L16.2332 15.2667L9.46651 8.50003L16.2332 1.73333Z"
+                        fill="#B0B0B0"
+                      />
+                    </svg>
+                  </button>
+                  <h2
+                    class="user-delete-block-title modal-title"
+                    id="deleteModalLabel"
+                  >
+                    Удалить клиента
+                  </h2>
+                  <p class="delete-question">
+                    Вы действительно хотите удалить данного клиента?
+                  </p>
+                  <button
+                    type="button"
+                    class="delete-block-dlt-button button save-new-user"
+                  >
+                    Удалить
+                  </button>
+                  <button
+                    type="button"
+                    class="delete-new-user button"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    Отмена
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="modal fade"
+            id="changeModal"
+            tabindex="-1"
+            aria-labelledby="changeModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <form
+                  action="#"
+                  id="user-change-form"
+                  class="user-change-form user-error"
+                >
+                  <button
+                    type="button"
+                    class="remove-button-change-user-form button"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <svg
+                      width="17"
+                      height="17"
+                      viewBox="0 0 17 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M16.2332 1.73333L15.2665 0.766664L8.49985 7.53336L1.73318 0.766696L0.766515 1.73336L7.53318 8.50003L0.766542 15.2667L1.73321 16.2333L8.49985 9.46669L15.2665 16.2334L16.2332 15.2667L9.46651 8.50003L16.2332 1.73333Z"
+                        fill="#B0B0B0"
+                      />
+                    </svg>
+                  </button>
+                  <div class="change-title-block">
+                    <h2 class="user-change-title" id="changeModalLabel">
+                      Изменить данные
+                    </h2>
+                    <span class="form-user-id"></span>
+                  </div>
+                  <div class="surname-change-div">
+                    <input
+                      name="surname"
+                      type="text"
+                      id="user-surname-change"
+                      class="user-surname-change js-input"
+                      placeholder="Фамилия*"
+                    />
+                  </div>
+
+                  <div class="name-change-div">
+                    <input
+                      name="name"
+                      type="text"
+                      id="user-name-change"
+                      class="user-name-change js-input"
+                      placeholder="Имя*"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      name="lastName"
+                      type="text"
+                      id="user-lastname-change"
+                      class="user-lastname-change js-input"
+                      placeholder="Отчество"
+                    />
+                  </div>
+                  <div class="add-contact-change">
+                    <div class="contact-block-change"></div>
+                    <button type="button" class="change-contact-button button">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_224_8628)">
+                          <path
+                            d="M7.99998 4.66659C7.63331 4.66659 7.33331 4.96659 7.33331 5.33325V7.33325H5.33331C4.96665 7.33325 4.66665 7.63325 4.66665 7.99992C4.66665 8.36659 4.96665 8.66659 5.33331 8.66659H7.33331V10.6666C7.33331 11.0333 7.63331 11.3333 7.99998 11.3333C8.36665 11.3333 8.66665 11.0333 8.66665 10.6666V8.66659H10.6666C11.0333 8.66659 11.3333 8.36659 11.3333 7.99992C11.3333 7.63325 11.0333 7.33325 10.6666 7.33325H8.66665V5.33325C8.66665 4.96659 8.36665 4.66659 7.99998 4.66659ZM7.99998 1.33325C4.31998 1.33325 1.33331 4.31992 1.33331 7.99992C1.33331 11.6799 4.31998 14.6666 7.99998 14.6666C11.68 14.6666 14.6666 11.6799 14.6666 7.99992C14.6666 4.31992 11.68 1.33325 7.99998 1.33325ZM7.99998 13.3333C5.05998 13.3333 2.66665 10.9399 2.66665 7.99992C2.66665 5.05992 5.05998 2.66659 7.99998 2.66659C10.94 2.66659 13.3333 5.05992 13.3333 7.99992C13.3333 10.9399 10.94 13.3333 7.99998 13.3333Z"
+                            fill="#9873FF"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_224_8628">
+                            <rect width="16" height="16" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      Добавить контакт
+                    </button>
+                    <button type="submit" class="change-user button">
+                      Сохранить
+                    </button>
+                    <button
+                      type="button"
+                      class="remove-change-user button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#deleteModal"
+                    >
+                      Удалить клиента
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./libs/choices.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script defer src="./libs/just-validate.min.js"></script>
+    <script defer type="module" src="./js/script.js"></script>
+  </body>
+</html>
